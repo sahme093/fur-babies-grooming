@@ -8,69 +8,69 @@
 // ============================================================================
 
 export const salon = {
-  name: "Your Salon Name",
-  shortName: "Your Salon",
+  name: "Fur Babies Pet Grooming",
+  shortName: "Fur Babies Pet Grooming",
 
-  // Used in the hero heading as: "Pet grooming {highlight} {city}"
-  heroKicker: "Pet grooming",
-  heroHighlight: "in",
-  heroCity: "Your City",
+  // Used in the hero heading as: "{kicker} {highlight} {city}"
+  heroKicker: "Grooming with",
+  heroHighlight: "love",
+  heroCity: "in Menifee",
 
-  tagline: "Dogs & cats · Your City, ST",
+  tagline: "Certified groomer · In-home pet sitting",
 
   description:
-    "Add a short introduction here — what makes your grooming salon different, which pets you welcome, and why new clients should book with you.",
+    "Hi, I’m Juju! I’m a certified pet groomer and in-home pet sitter in Menifee, CA. Every pup gets one-on-one attention in my private grooming studio — gentle handling for nervous babies, quality products, and a fresh, fluffy finish that smells amazing for days.",
 
-  // E.164 format — used for tel: / sms: links. +1 555 555 0100 is a reserved
-  // fictional number block, safe to leave in place until you add a real one.
-  phone: "+15555550100",
-  phoneDisplay: "(555) 555-0100",
+  // E.164 format — used for tel: / sms: links.
+  phone: "+16197723723",
+  phoneDisplay: "(619) 772-3723",
 
   email: "", // leave blank to hide the "send by email" fallback link
 
   address: {
-    line1: "123 Main Street",
-    city: "Your City",
-    state: "ST",
-    zip: "00000",
+    line1: "29440 Canteen Cir",
+    city: "Menifee",
+    state: "CA",
+    zip: "92596",
   },
 
   // Google Maps embed + link query. Kept separate from the address object
   // so you can hand-tune the query string without reformatting the address.
-  mapsQuery: "123 Main Street, Your City, ST 00000",
+  mapsQuery: "29440 Canteen Cir, Menifee, CA 92596",
 
   // 0 = Sunday ... 6 = Saturday, matching Date#getDay().
   hours: [
     { day: "Sunday", open: null, close: null },
-    { day: "Monday", open: "9:00 am", close: "5:00 pm" },
-    { day: "Tuesday", open: "9:00 am", close: "5:00 pm" },
-    { day: "Wednesday", open: "9:00 am", close: "5:00 pm" },
-    { day: "Thursday", open: "9:00 am", close: "5:00 pm" },
-    { day: "Friday", open: "9:00 am", close: "5:00 pm" },
-    { day: "Saturday", open: "9:00 am", close: "2:00 pm" },
+    { day: "Monday", open: "7:00 am", close: "6:00 pm" },
+    { day: "Tuesday", open: "7:00 am", close: "6:00 pm" },
+    { day: "Wednesday", open: "7:00 am", close: "6:00 pm" },
+    { day: "Thursday", open: "7:00 am", close: "6:00 pm" },
+    { day: "Friday", open: "7:00 am", close: "6:00 pm" },
+    { day: "Saturday", open: "7:00 am", close: "6:00 pm" },
   ],
-  hoursSummary: "Mon–Fri, 9am–5pm · Sat 9am–2pm",
+  hoursSummary: "Mon–Sat, 7am–6pm",
+
+  // Drop-off windows offered in the booking form.
+  dropOffTimes: ["7–9 am", "9–11 am", "11 am–1 pm", "1–3 pm", "3–5 pm"],
 
   // Toggle to show/hide "from $X" price labels next to each service.
-  // Prices below are placeholder sample values — replace with your own.
   showPrices: false,
 
+  // Leave `cat` empty to hide cats from the services list and booking form.
   services: {
     dog: [
-      { name: "Full service grooming", price: 80 },
-      { name: "Bathing and blow dry", price: 40 },
-      { name: "Nail trimming", price: 15 },
-      { name: "Ear cleaning", price: 10 },
-      { name: "Teeth brushing", price: 10 },
-      { name: "Anal gland expression", price: 15 },
-      { name: "Flea and tick treatment", price: 20 },
+      { name: "Full service grooming" },
+      { name: "Grooming and styling" },
+      { name: "Bathing and blow dry" },
+      { name: "Nail trimming" },
+      { name: "Ear cleaning" },
+      { name: "Teeth brushing" },
+      { name: "Anal gland expression" },
+      { name: "Flea and tick treatment" },
+      { name: "Color dye and nail polish" },
+      { name: "Dog sitting" },
     ],
-    cat: [
-      { name: "Cat grooming", price: 65 },
-      { name: "Cat bathing", price: 50 },
-      { name: "Cat nail trimming", price: 15 },
-      { name: "Cat ear cleaning", price: 10 },
-    ],
+    cat: [],
   },
 
   // [label, sublabel] pairs shown as size-picker buttons in the booking form.
@@ -81,101 +81,81 @@ export const salon = {
       ["Large", "50–90 lb"],
       ["XL", "90+ lb"],
     ],
-    cat: [
-      ["Small", "under 8 lb"],
-      ["Medium", "8–12 lb"],
-      ["Large", "12+ lb"],
-    ],
+    cat: [],
   },
 
-  // Sample gallery — swap these files in /public/assets and update the alt
-  // text to describe each real photo.
+  // Shown in the hero.
+  heroPhoto: {
+    src: "/assets/salon.webp",
+    alt: "Juju’s grooming studio with an electric grooming table, dryer and colorful leashes",
+  },
+
   gallery: [
-    { src: "/assets/p5.webp", alt: "Sample gallery photo — replace with your own grooming photos" },
-    { src: "/assets/p1.webp", alt: "Sample gallery photo — replace with your own grooming photos" },
-    { src: "/assets/p3.webp", alt: "Sample gallery photo — replace with your own grooming photos" },
+    { src: "/assets/goldendoodle.webp", alt: "Apricot Goldendoodle with a fresh teddy-bear cut and floral bandana" },
+    { src: "/assets/shih-tzu.webp", alt: "Cream Shih Tzu mix freshly groomed, wearing a navy bandana" },
+    { src: "/assets/yorkie.webp", alt: "Yorkie with a neat puppy cut sitting on the grooming table" },
   ],
 
-  // Sample reviews — fictional names and quotes. Replace with your own
-  // reviews (e.g. copied from Google) before publishing.
+  // Real Google reviews.
   reviews: [
     {
-      name: "Jordan P.",
-      when: "3 years ago",
-      text: "Wonderful experience from start to finish! The groomer was so patient with my pup and did an amazing job with the cut. Highly recommend!",
+      name: "Tiana Robinson",
+      when: "3 months ago",
+      text: "Juju is an exceptional groomer who consistently provides us with a fantastic experience. We’ve become so impressed that we now bring both of our Goldendoodles to her for grooming. She takes the time to understand and cater to each of their unique needs with a passionate and loving approach. Juju genuinely cares for our fur babies and greets them with a warm hug and lots of affection. When they arrive looking wild and untamed, they leave looking and smelling absolutely amazing! We are incredibly grateful for her kind-hearted service and will never consider going anywhere else. The prices are also reasonable, making her a great choice for grooming. We highly recommend checking her out; you won’t be disappointed!",
     },
     {
-      name: "Sam R.",
-      when: "a year ago",
-      text: "Such a great job on both of our pets! Very patient with them and takes the time to get every detail right. They also send lots of update photos during the appointment, which we love.",
+      name: "Bianca Higuera",
+      when: "2 months ago",
+      text: "Juju is the sweetest groomer/ dog sitter to ever exist! Lady has sever anxiety, but Juju’s gentleness keeps Lady calm. We’re so excited to have met Juju. Juju gives the best customer service and hair cuts around. 10/10 I recommend her and her services!",
     },
     {
-      name: "Taylor M.",
-      when: "a year ago",
-      text: "Great job with our almost one-year-old puppy. Pricing was reasonable and they were very patient with our hyper little guy.",
+      name: "Alejandra Rodriguez",
+      when: "2 months ago",
+      text: "Juju is the best groomer in the area she is so sweet and does an amazing job with my dog, she’s always so patient and demonstrates her love for animals. Whenever I pick him up my fur baby he always comes back looking like a stuffed animal and smelling amazing. She is truly one of a kind and you can tell she’s passionate about her job.🤍",
     },
     {
-      name: "Casey L.",
-      when: "2 years ago",
-      text: "An incredible groomer — my dog was completely comfortable the whole time. Loved getting text updates with cute photos throughout the appointment. Highly recommend!",
-    },
-    {
-      name: "Morgan T.",
-      when: "3 weeks ago",
-      text: "Did an amazing job on our dog and left him looking great. We'll definitely be returning customers!",
-    },
-    {
-      name: "Alex W.",
-      when: "2 years ago",
-      text: "We love bringing our dogs here — the team is so good with them, even with tricky coats and big personalities. Incredible work every time!",
-    },
-    {
-      name: "Riley M.",
-      when: "a year ago",
-      text: "I've been taking my dog here weekly and I'm so happy with how great they always look. Wouldn't go anywhere else.",
-    },
-    {
-      name: "Amanda P.",
-      when: "2 years ago",
-      text: "Always responds promptly and my pet leaves happier and looking better every time. Highly recommend!",
+      name: "Some Chick",
+      when: "9 months ago",
+      text: "This woman is an angel. I had been taking my baby somewhere else for a looong time, they injured him expressing his glands so I came to her. She treats my baby like he’s her own. Every time she does a beautiful job and he comes home happy. He loves her he used to be terrified of the groomer, not her ever. She gave him a free dye job and a toy and cookie for Christmas. He has been feeling a little mopey last time he went, she called and texted the next day just to check how he was feeling. She’s amazing. I will never voluntarily take him to anyone else again. And her prices are very fair. She uses really good products he gets a perfume spritz every time and smells lovely for like a week after but it’s still gentle and not overpowering at all. Truly can’t say enough about her 💜 He looks like a My Little Pony I can’t even stand it he’s so cute.",
     },
   ],
 
-  // Sample neutral palette — not tied to any brand. Applied at runtime as
-  // CSS custom properties (see src/main.jsx), so this object is the ONE
-  // place that defines the site's color palette. Swap these for your own
-  // brand colors; keep accentStrong/accentDeep/accentLabel dark enough to
-  // clear WCAG AA contrast against the light backgrounds they sit on.
+  // Palette pulled from the studio photos: bubblegum pink, grooming-mat teal,
+  // deep plum ink. Applied at runtime as CSS custom properties (see
+  // src/main.jsx). accentStrong/accentDeep/accentLabel are kept dark enough
+  // to clear WCAG AA contrast against the light backgrounds they sit on.
   colors: {
-    bg: "#FAF6EF",
+    bg: "#FFF8F3",
     surface: "#FFFFFF",
-    surfaceAlt: "#F3EDE3",
-    ink: "#1D1B18",
-    inkSoft: "#4F4A43",
-    inkMute: "#6B655C",
-    border: "rgba(29,27,24,.1)",
-    borderStrong: "rgba(29,27,24,.18)",
-    accent: "#EFA73C",
-    accentHover: "#F3B657",
-    // Darkened slightly from the source design's #C98323 / #B06F14 so text
-    // set in these colors clears WCAG AA contrast against the cream/white
-    // backgrounds they sit on (large hero text needs 3:1, the small eyebrow
-    // labels need 4.5:1) — same hue, just a touch deeper.
-    accentStrong: "#B8741A",
-    accentDeep: "#9A5F0E",
-    accentLabel: "#8A5A10",
-    highlight: "#FDF1DC",
-    selection: "#F4D49B",
-    onDark: "#FAF6EF",
+    surfaceAlt: "#FDEDE8",
+    ink: "#2A2140",
+    inkSoft: "#4E4566",
+    inkMute: "#6B6382",
+    inkHover: "#41355E",
+    border: "rgba(42,33,64,.1)",
+    borderStrong: "rgba(42,33,64,.2)",
+    accent: "#F59AB0",
+    accentHover: "#F8B1C3",
+    accentStrong: "#C0335F",
+    accentDeep: "#A32A52",
+    accentLabel: "#0B7A71",
+    teal: "#3CBFB2",
+    tealSoft: "#DDF4F1",
+    highlight: "#FFE6EC",
+    selection: "#FBD0DB",
+    onDark: "#FFF8F3",
+    onDarkSoft: "#D6CFE4",
+    headerBg: "rgba(255,248,243,.94)",
+    placeholder: "#F3E3DE",
     error: "#B3261E",
-    openDot: "#3E9B5A",
-    closedDot: "#C9A27A",
+    openDot: "#2E9E6A",
+    closedDot: "#D69AAA",
   },
 
   fonts: {
-    display: "'Josefin Sans', sans-serif",
-    body: "'Jost', system-ui, sans-serif",
+    display: "'Fredoka', system-ui, sans-serif",
+    body: "'Nunito', system-ui, sans-serif",
     googleFontsHref:
-      "https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&family=Jost:wght@400;500;600&display=swap",
+      "https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&family=Nunito:wght@400;600;700&display=swap",
   },
 };

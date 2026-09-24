@@ -30,10 +30,10 @@ export default function App() {
           <div className="container book-grid">
             <div className="book-intro">
               <span className="section-label">Request an appointment</span>
-              <h2 className="section-title">Tell us about your pet</h2>
+              <h2 className="section-title">Tell Juju about your fur baby</h2>
               <p>
-                Fill this out and we’ll open a text message with your details, ready
-                to send. We’ll reply to confirm your time and price.
+                Fill this out and your phone will open a text message with your
+                details, ready to send. Juju will reply to confirm your time and price.
               </p>
               <a href={`tel:${salon.phone}`} className="book-intro__phone">
                 {salon.phoneDisplay}

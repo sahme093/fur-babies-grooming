@@ -15,8 +15,8 @@ export default function Header() {
     <header className="site-header">
       <div className="container site-header__bar">
         <a href="#top" className="brand">
-          <span className="brand__mark" aria-hidden="true" />
-          <span className="brand__name">{salon.name}</span>
+          <img src="/assets/logo.svg" alt="" className="brand__mark" width={44} height={44} />
+          <span className="brand__name">{salon.shortName}</span>
         </a>
 
         <nav className="nav-desktop" aria-label="Primary">

@@ -2,6 +2,8 @@ import { useState } from "react";
 import { salon } from "../config.js";
 import { buildSmsHref, buildMailHref, isMobileDevice } from "../utils/sms.js";
 
+const HAS_CATS = salon.services.cat.length > 0;
+
 const EMPTY_FIELDS = {
   pet: "",
   breed: "",
@@ -150,7 +152,7 @@ export default function BookingForm() {
         {isMobileDevice() ? (
           <>
             <p>
-              Your message to {salon.name} is ready. Tap send in your messages app.
+              Your message to Juju is ready. Tap send in your messages app.
               If it didn’t open, use the button below.
             </p>
             <pre>{message}</pre>
@@ -168,7 +170,7 @@ export default function BookingForm() {
         ) : (
           <>
             <p>
-              Text messages can only be sent from a phone. Call us, or copy this
+              Text messages can only be sent from a phone. Call Juju, or copy this
               message and paste it into a text to {salon.phoneDisplay}.
             </p>
             <pre>{message}</pre>
@@ -205,33 +207,35 @@ export default function BookingForm() {
   return (
     <form className="booking-form" onSubmit={handleSubmit} noValidate>
       <div className="field-grid">
-        <div className="toggle-group">
-          <span className="toggle-group__label">Your pet is a</span>
-          <div className="toggle-group__row">
-            <button
-              type="button"
-              className="toggle-btn"
-              aria-pressed={species === "dog"}
-              onClick={() => {
-                setSpecies("dog");
-                setSizeIndex(null);
-              }}
-            >
-              Dog
-            </button>
-            <button
-              type="button"
-              className="toggle-btn"
-              aria-pressed={species === "cat"}
-              onClick={() => {
-                setSpecies("cat");
-                setSizeIndex(null);
-              }}
-            >
-              Cat
-            </button>
+        {HAS_CATS && (
+          <div className="toggle-group">
+            <span className="toggle-group__label">Your pet is a</span>
+            <div className="toggle-group__row">
+              <button
+                type="button"
+                className="toggle-btn"
+                aria-pressed={species === "dog"}
+                onClick={() => {
+                  setSpecies("dog");
+                  setSizeIndex(null);
+                }}
+              >
+                Dog
+              </button>
+              <button
+                type="button"
+                className="toggle-btn"
+                aria-pressed={species === "cat"}
+                onClick={() => {
+                  setSpecies("cat");
+                  setSizeIndex(null);
+                }}
+              >
+                Cat
+              </button>
+            </div>
           </div>
-        </div>
+        )}
 
         <div className="toggle-group">
           <span className="toggle-group__label">First visit with us?</span>
@@ -346,10 +350,11 @@ export default function BookingForm() {
           Preferred drop-off
           <select id="time" value={fields.time} onChange={(e) => setField("time", e.target.value)}>
             <option value="Any time">Any time</option>
-            <option value="8–10 am">8–10 am</option>
-            <option value="10 am–12 pm">10 am–12 pm</option>
-            <option value="12–2 pm">12–2 pm</option>
-            <option value="2–4 pm">2–4 pm</option>
+            {salon.dropOffTimes.map((t) => (
+              <option key={t} value={t}>
+                {t}
+              </option>
+            ))}
           </select>
         </label>
       </div>

@@ -10,7 +10,7 @@ export default function Visit() {
     <section id="visit" className="container visit-section">
       <div className="visit-info">
         <span className="section-label">Hours &amp; location</span>
-        <h2 className="section-title">Come see us</h2>
+        <h2 className="section-title">Come say hi</h2>
 
         <div className="hours-list">
           {rows.map((row) => (
