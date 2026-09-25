@@ -1,0 +1,3 @@
+# Demo site: keep it out of search engines.
+/*
+  X-Robots-Tag: noindex, nofollow

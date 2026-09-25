@@ -1,20 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta name="theme-color" content="#FFF8F3" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#FFF8F3" />
 
     <!--
-      Title + description are hardcoded here (not pulled from src/config.js)
+      Title, description and link-preview (og:) tags are hardcoded here (not pulled from src/config.js)
       because index.html is read by browsers/crawlers before React ever runs.
-      If you reuse this site for a different salon, update these two tags
+      If you reuse this site for a different salon, update these tags
       AND src/config.js so they stay in sync.
     -->
     <title>Fur Babies Pet Grooming | Dog Grooming in Menifee, CA</title>
     <meta
       name="description"
       content="Juju is a certified dog groomer and in-home pet sitter in Menifee, CA. Full-service grooming, baths, nail trims, teeth brushing, color and dog sitting. Mon–Sat 7am–6pm."
+    />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Fur Babies Pet Grooming" />
+    <meta property="og:title" content="Fur Babies Pet Grooming | Dog Grooming in Menifee, CA" />
+    <meta
+      property="og:description"
+      content="Certified dog groomer and in-home pet sitter in Menifee, CA. Mon–Sat 7am–6pm."
     />
 
     <link rel="icon" type="image/svg+xml" href="/assets/logo.svg" />
